@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM summary </title>
+</head>
+<body>
+    <h1>DOM Summary </h1>
+    <p id="make-changes">defoult text for first button</p>
+    <p id="second-text">defoult text for second button</p>
+    <button onclick="makeChange()" type="">make change with direct function</button>
+    <button id="HandleEventListener" >make changes with addEventListener</button>
+
+    <script>
+        //fist button
+        function makeChange(){
+            const make_change= document.getElementById('make-changes');
+            make_change.innerText = 'text updated by first button'
+        }
+
+        const HandleEventListener = document.getElementById('HandleEventListener').addEventListener('click', function () {
+            const get_secondText = document.getElementById('second-text');
+            get_secondText.innerText= 'text updated by second button'
+        })
+    </script>
+</body>
+</html>
