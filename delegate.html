@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate function</title>    
+</head>
+<body>
+    <h1>Explore Events Delegate</h1>
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum.</li>
+        <li class="item">Sequi, quae?</li>
+        <li class="item">Quis, quod.</li>
+        <li class="item">Nemo, dolor.</li>
+        <li class="item">Debitis, assumenda.</li>
+    </ul>
+    <button id="btn-add" type="">Add list item</button>
+
+</body>
+<script>
+    
+    //code for remove only defoult item
+
+    // const items = document.getElementsByClassName('item') ;
+    // for (const item  of items) {
+    //     item.addEventListener('click',function (event) {
+    //         //parent node
+    //         // console.log(item.parentNode);
+    //         item.parentNode.removeChild(item)
+    //         console.log(item);
+    //     })
+    // }
+
+    //code for remove brand new item, list container theke
+    document.getElementById('list-container').addEventListener('click',function (event) {
+        event.target.parentNode.removeChild(event.target)
+
+        
+    })
+    //btne click korar por ja ja hobe
+    const HandleAddBtn = document.getElementById('btn-add').addEventListener('click',function () {        
+        const list_container = document.getElementById('list-container');
+        const li = document.createElement('li')
+        li.innerText = 'Brand new element added';
+        li.classList.add('item')
+    
+        list_container.appendChild(li)
+    })
+    
+</script>
+</html>
