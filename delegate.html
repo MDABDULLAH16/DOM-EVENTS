@@ -14,11 +14,12 @@
         <li class="item">Nemo, dolor.</li>
         <li class="item">Debitis, assumenda.</li>
     </ul>
+    <input id="input-feild" type="text">
     <button id="btn-add" type="">Add list item</button>
 
 </body>
 <script>
-    
+
     //code for remove only defoult item
 
     // const items = document.getElementsByClassName('item') ;
@@ -40,11 +41,16 @@
     //btne click korar por ja ja hobe
     const HandleAddBtn = document.getElementById('btn-add').addEventListener('click',function () {        
         const list_container = document.getElementById('list-container');
+        const inputField = document.getElementById('input-feild')
+        const new_item = inputField.value;
         const li = document.createElement('li')
-        li.innerText = 'Brand new element added';
+
+        // li.innerText = 'Brand new element added'; this is ready made item//
+        li.append(new_item)
         li.classList.add('item')
     
         list_container.appendChild(li)
+        inputField.value = '';
     })
     
 </script>
