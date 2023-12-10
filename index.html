@@ -11,11 +11,16 @@
     <button id="make-red" type="">make Red</button>
     <!--option 3 make make-yellow with inline js --> 
     <button onclick="document.body.style.background= 'yellow'" type="">make-yellow with inline js</button>
+    <button id="make-tomato">make-tomato</button>
+    <button id="make-goldenRod" type="">make-goldenRod</button>
 
 
     <script src="/js-events.js"></script>
     <script>
-        
+        const make_goldenRod = document.getElementById('make-goldenRod').addEventListener('click', function() {
+            document.body.style.background = 'goldenrod'
+            
+        })
     </script>
 </body>
 </html>

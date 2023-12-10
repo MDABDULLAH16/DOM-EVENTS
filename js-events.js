@@ -11,3 +11,10 @@ make_red.addEventListener("click", function makeRed() {
 
 // <!--option 3 make make-yellow with inline js -->
 //     <button onclick="document.body.style.background= 'yellow'" type="">make-yellow with inline js</button>
+
+// Option 4
+const make_Tomato = document.getElementById("make-tomato");
+make_Tomato.onclick = makeTomato;
+function makeTomato() {
+  document.body.style.background = "tomato";
+}
